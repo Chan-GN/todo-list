@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.example.todolist.domain.ToDo;
 import org.example.todolist.dto.ToDoRequestDto;
 import org.example.todolist.dto.ToDoResponseDto;
-import org.example.todolist.dto.ToDoUpdateDto;
 import org.example.todolist.repository.ToDoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,8 +30,8 @@ public class ToDoService {
     }
 
     @Transactional
-    public void updateToDo(ToDoUpdateDto dto) {
-        ToDo toDo = toDoRepository.findById(dto.getId())
+    public void updateToDo(Long targetId, ToDoRequestDto dto) {
+        ToDo toDo = toDoRepository.findById(targetId)
                 .orElseThrow(() -> new IllegalArgumentException("수정하려는 할 일이 존재하지 않습니다."));
         toDo.updateContent(dto.getContent());
     }
