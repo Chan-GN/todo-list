@@ -28,4 +28,8 @@ public class ToDo {
         return new ToDo(content, false);
     }
 
+    public void updateContent(String content) {
+        this.content = content;
+    }
+
 }
