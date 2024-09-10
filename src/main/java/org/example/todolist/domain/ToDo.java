@@ -32,4 +32,8 @@ public class ToDo {
         this.content = content;
     }
 
+    public void updateDone(boolean done) {
+        this.done = done;
+    }
+
 }

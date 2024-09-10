@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.todolist.domain.ToDo;
 import org.example.todolist.dto.ToDoRequestDto;
 import org.example.todolist.dto.ToDoResponseDto;
+import org.example.todolist.dto.ToggleRequestDto;
 import org.example.todolist.repository.ToDoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,6 +42,13 @@ public class ToDoService {
         ToDo toDo = toDoRepository.findById(targetId)
                 .orElseThrow(() -> new IllegalArgumentException("삭제하려는 할 일이 존재하지 않습니다."));
         toDoRepository.delete(toDo);
+    }
+
+    @Transactional
+    public void toggleDone(Long targetId, ToggleRequestDto dto) {
+        ToDo toDo = toDoRepository.findById(targetId)
+                .orElseThrow(() -> new IllegalArgumentException("할 일이 존재하지 않습니다."));
+        toDo.updateDone(dto.isDone());
     }
 
 }

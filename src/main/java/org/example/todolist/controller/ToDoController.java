@@ -3,6 +3,7 @@ package org.example.todolist.controller;
 import lombok.RequiredArgsConstructor;
 import org.example.todolist.dto.ToDoRequestDto;
 import org.example.todolist.dto.ToDoResponseDto;
+import org.example.todolist.dto.ToggleRequestDto;
 import org.example.todolist.service.ToDoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +33,12 @@ public class ToDoController {
     @PutMapping("/{targetId}")
     public ResponseEntity<Void> updateToDo(@PathVariable Long targetId, @RequestBody ToDoRequestDto dto) {
         toDoService.updateToDo(targetId, dto);
+        return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/{targetId}/toggle")
+    public ResponseEntity<Void> toggleToDoDone(@PathVariable Long targetId, @RequestBody ToggleRequestDto dto) {
+        toDoService.toggleDone(targetId, dto);
         return ResponseEntity.ok().build();
     }
 
