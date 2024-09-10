@@ -9,12 +9,12 @@ public class ToDoResponseDto {
 
     private String content;
 
-    private boolean isDone;
+    private boolean done;
 
-    public ToDoResponseDto(Long id, String content, boolean isDone) {
+    public ToDoResponseDto(Long id, String content, boolean done) {
         this.id = id;
         this.content = content;
-        this.isDone = isDone;
+        this.done = done;
     }
 
 }

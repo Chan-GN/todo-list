@@ -17,11 +17,11 @@ public class ToDo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content;
-    private boolean isDone;
+    private boolean done;
 
-    private ToDo(String content, boolean isDone) {
+    private ToDo(String content, boolean done) {
         this.content = content;
-        this.isDone = isDone;
+        this.done = done;
     }
 
     public static ToDo of(String content) {
