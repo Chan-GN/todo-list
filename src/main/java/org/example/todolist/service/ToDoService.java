@@ -25,7 +25,7 @@ public class ToDoService {
     }
 
     public List<ToDoResponseDto> findAll() {
-        return toDoRepository.findAll().stream()
+        return toDoRepository.findAllSorted().stream()
                 .map(todo -> new ToDoResponseDto(todo.getId(), todo.getContent(), todo.isDone()))
                 .toList();
     }
