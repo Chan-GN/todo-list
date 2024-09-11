@@ -1,5 +1,6 @@
 package org.example.todolist.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.todolist.dto.ToDoRequestDto;
 import org.example.todolist.dto.ToDoResponseDto;
@@ -20,7 +21,7 @@ public class ToDoController {
     private final ToDoService toDoService;
 
     @PostMapping
-    public ResponseEntity<Void> addToDo(@RequestBody ToDoRequestDto dto) {
+    public ResponseEntity<Void> addToDo(@RequestBody @Valid ToDoRequestDto dto) {
         toDoService.saveToDo(dto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
@@ -31,13 +32,13 @@ public class ToDoController {
     }
 
     @PutMapping("/{targetId}")
-    public ResponseEntity<Void> updateToDo(@PathVariable Long targetId, @RequestBody ToDoRequestDto dto) {
+    public ResponseEntity<Void> updateToDo(@PathVariable Long targetId, @RequestBody @Valid ToDoRequestDto dto) {
         toDoService.updateToDo(targetId, dto);
         return ResponseEntity.ok().build();
     }
 
     @PutMapping("/{targetId}/toggle")
-    public ResponseEntity<Void> toggleToDoDone(@PathVariable Long targetId, @RequestBody ToggleRequestDto dto) {
+    public ResponseEntity<Void> toggleToDoDone(@PathVariable Long targetId, @RequestBody @Valid ToggleRequestDto dto) {
         toDoService.toggleDone(targetId, dto);
         return ResponseEntity.ok().build();
     }
