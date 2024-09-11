@@ -23,5 +23,15 @@ public class Member {
 
     private String name;
 
+    private Member(String loginId, String password, String name) {
+        this.loginId = loginId;
+        this.password = password;
+        this.name = name;
+    }
+
+    public static Member of(String loginId, String password, String name) {
+        return new Member(loginId, password, name);
+    }
+
 }
 

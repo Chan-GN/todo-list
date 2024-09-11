@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Getter
-class CustomUserDetails implements UserDetails {
+public class CustomUserDetails implements UserDetails {
 
     private final Member member;
 
