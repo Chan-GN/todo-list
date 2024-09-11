@@ -18,18 +18,27 @@ public class ToDoService {
 
     private final ToDoRepository toDoRepository;
 
+    /**
+     * 할 일 추가
+     */
     @Transactional
     public void saveToDo(ToDoRequestDto dto) {
         ToDo toDo = ToDo.of(dto.getContent());
         toDoRepository.save(toDo);
     }
 
+    /**
+     * 할 일 목록 조회
+     */
     public List<ToDoResponseDto> findAll() {
         return toDoRepository.findAllSorted().stream()
                 .map(todo -> new ToDoResponseDto(todo.getId(), todo.getContent(), todo.isDone()))
                 .toList();
     }
 
+    /**
+     * 할 일 수정
+     */
     @Transactional
     public void updateToDo(Long targetId, ToDoRequestDto dto) {
         ToDo toDo = toDoRepository.findById(targetId)
@@ -37,6 +46,9 @@ public class ToDoService {
         toDo.updateContent(dto.getContent());
     }
 
+    /**
+     * 할 일 삭제
+     */
     @Transactional
     public void deleteToDo(Long targetId) {
         ToDo toDo = toDoRepository.findById(targetId)
@@ -44,6 +56,9 @@ public class ToDoService {
         toDoRepository.delete(toDo);
     }
 
+    /**
+     * 할 일 완료 상태 변경
+     */
     @Transactional
     public void toggleDone(Long targetId, ToggleRequestDto dto) {
         ToDo toDo = toDoRepository.findById(targetId)
