@@ -1,5 +1,6 @@
 package org.example.todolist.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.todolist.config.CustomUserDetails;
 import org.example.todolist.config.JwtProvider;
@@ -23,12 +24,12 @@ public class AuthenticationController {
     private final JwtProvider jwtProvider;
 
     @PostMapping("/join")
-    public ResponseEntity<Long> register(@RequestBody SignUpRequestDto dto) {
+    public ResponseEntity<Long> register(@RequestBody @Valid SignUpRequestDto dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(authenticationService.saveMember(dto));
     }
 
     @PostMapping("/login")
-    public ResponseEntity<SignInResponseDto> authenticate(@RequestBody SignInRequestDto dto) {
+    public ResponseEntity<SignInResponseDto> authenticate(@RequestBody @Valid SignInRequestDto dto) {
         CustomUserDetails userDetails = authenticationService.authenticate(dto);
 
         String jwtToken = jwtProvider.generateToken(userDetails);
