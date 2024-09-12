@@ -2,9 +2,9 @@ package org.example.todolist.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.todolist.domain.ToDo;
-import org.example.todolist.dto.ToDoRequestDto;
-import org.example.todolist.dto.ToDoResponseDto;
-import org.example.todolist.dto.ToggleRequestDto;
+import org.example.todolist.dto.to_do.ToDoRequestDto;
+import org.example.todolist.dto.to_do.ToDoResponseDto;
+import org.example.todolist.dto.to_do.ToggleRequestDto;
 import org.example.todolist.exception.ToDoNotFoundException;
 import org.example.todolist.repository.ToDoRepository;
 import org.springframework.stereotype.Service;

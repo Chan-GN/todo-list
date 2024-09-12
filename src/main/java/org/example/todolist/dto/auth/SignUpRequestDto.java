@@ -1,4 +1,4 @@
-package org.example.todolist.dto;
+package org.example.todolist.dto.auth;
 
 import lombok.Data;
 
