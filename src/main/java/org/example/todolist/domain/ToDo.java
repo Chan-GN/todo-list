@@ -1,9 +1,6 @@
 package org.example.todolist.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,16 +13,22 @@ public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String content;
+
     private boolean done;
 
-    private ToDo(String content, boolean done) {
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Member member;
+
+    private ToDo(String content, boolean done, Member member) {
         this.content = content;
         this.done = done;
+        this.member = member;
     }
 
-    public static ToDo of(String content) {
-        return new ToDo(content, false);
+    public static ToDo of(String content, Member member) {
+        return new ToDo(content, false, member);
     }
 
     public void updateContent(String content) {
