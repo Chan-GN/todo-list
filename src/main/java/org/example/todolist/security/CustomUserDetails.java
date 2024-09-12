@@ -1,4 +1,4 @@
-package org.example.todolist.config;
+package org.example.todolist.security;
 
 import lombok.Getter;
 import org.example.todolist.domain.Member;

@@ -1,4 +1,4 @@
-package org.example.todolist.dto.to_do;
+package org.example.todolist.dto.todo;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

@@ -2,7 +2,9 @@ package org.example.todolist.config;
 
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
-import org.example.todolist.service.CustomOidcUserService;
+import org.example.todolist.config.jwt.JwtAuthenticationFilter;
+import org.example.todolist.security.CustomOidcUserService;
+import org.example.todolist.security.OAuth2LoginSuccessHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

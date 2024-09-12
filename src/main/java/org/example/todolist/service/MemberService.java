@@ -2,7 +2,7 @@ package org.example.todolist.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.todolist.domain.Member;
-import org.example.todolist.dto.MemberResponseDto;
+import org.example.todolist.dto.member.MemberResponseDto;
 import org.example.todolist.exception.MemberNotFoundException;
 import org.example.todolist.repository.MemberRepository;
 import org.springframework.stereotype.Service;

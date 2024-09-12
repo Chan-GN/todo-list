@@ -1,4 +1,4 @@
-package org.example.todolist.config;
+package org.example.todolist.config.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

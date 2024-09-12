@@ -2,8 +2,8 @@ package org.example.todolist.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.todolist.config.CustomUserDetails;
-import org.example.todolist.config.JwtProvider;
+import org.example.todolist.security.CustomUserDetails;
+import org.example.todolist.config.jwt.JwtProvider;
 import org.example.todolist.dto.auth.SignInRequestDto;
 import org.example.todolist.dto.auth.SignInResponseDto;
 import org.example.todolist.dto.auth.SignUpRequestDto;

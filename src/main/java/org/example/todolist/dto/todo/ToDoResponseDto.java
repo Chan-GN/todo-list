@@ -1,4 +1,4 @@
-package org.example.todolist.dto.to_do;
+package org.example.todolist.dto.todo;
 
 import lombok.Data;
 

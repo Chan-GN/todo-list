@@ -1,7 +1,7 @@
 package org.example.todolist.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.todolist.config.CustomUserDetails;
+import org.example.todolist.security.CustomUserDetails;
 import org.example.todolist.domain.Member;
 import org.example.todolist.dto.auth.SignInRequestDto;
 import org.example.todolist.dto.auth.SignUpRequestDto;

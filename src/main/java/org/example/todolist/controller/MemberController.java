@@ -1,7 +1,7 @@
 package org.example.todolist.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.todolist.dto.MemberResponseDto;
+import org.example.todolist.dto.member.MemberResponseDto;
 import org.example.todolist.service.MemberService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

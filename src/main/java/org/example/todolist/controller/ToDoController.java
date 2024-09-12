@@ -2,10 +2,10 @@ package org.example.todolist.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.todolist.config.CustomUserDetails;
-import org.example.todolist.dto.to_do.ToDoRequestDto;
-import org.example.todolist.dto.to_do.ToDoResponseDto;
-import org.example.todolist.dto.to_do.ToggleRequestDto;
+import org.example.todolist.security.CustomUserDetails;
+import org.example.todolist.dto.todo.ToDoRequestDto;
+import org.example.todolist.dto.todo.ToDoResponseDto;
+import org.example.todolist.dto.todo.ToggleRequestDto;
 import org.example.todolist.service.ToDoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

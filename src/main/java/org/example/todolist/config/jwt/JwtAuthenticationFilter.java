@@ -1,4 +1,4 @@
-package org.example.todolist.config;
+package org.example.todolist.config.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.ExpiredJwtException;

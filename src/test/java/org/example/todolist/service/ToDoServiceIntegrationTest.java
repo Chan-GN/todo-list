@@ -2,8 +2,8 @@ package org.example.todolist.service;
 
 import org.example.todolist.domain.Member;
 import org.example.todolist.domain.ToDo;
-import org.example.todolist.dto.to_do.ToDoRequestDto;
-import org.example.todolist.dto.to_do.ToDoResponseDto;
+import org.example.todolist.dto.todo.ToDoRequestDto;
+import org.example.todolist.dto.todo.ToDoResponseDto;
 import org.example.todolist.exception.MemberNotFoundException;
 import org.example.todolist.repository.MemberRepository;
 import org.example.todolist.repository.ToDoRepository;

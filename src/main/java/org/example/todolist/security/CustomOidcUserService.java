@@ -1,6 +1,5 @@
-package org.example.todolist.service;
+package org.example.todolist.security;
 
-import org.example.todolist.config.CustomUserDetails;
 import org.example.todolist.domain.Member;
 import org.example.todolist.repository.MemberRepository;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
