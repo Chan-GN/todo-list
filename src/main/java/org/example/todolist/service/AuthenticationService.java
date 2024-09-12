@@ -5,6 +5,7 @@ import org.example.todolist.config.CustomUserDetails;
 import org.example.todolist.domain.Member;
 import org.example.todolist.dto.SignInRequestDto;
 import org.example.todolist.dto.SignUpRequestDto;
+import org.example.todolist.exception.DuplicateLoginIdException;
 import org.example.todolist.repository.MemberRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,6 +27,7 @@ public class AuthenticationService {
 
     @Transactional
     public Long saveMember(SignUpRequestDto dto) {
+        checkDuplicateLoginId(dto.getLoginId());
         Member member = Member.of(dto.getLoginId(), passwordEncoder.encode(dto.getPassword()), dto.getName());
         Member savedMember = memberRepository.save(member);
         return savedMember.getId();
@@ -36,6 +38,13 @@ public class AuthenticationService {
                 new UsernamePasswordAuthenticationToken(dto.getLoginId(), dto.getPassword())
         );
         return (CustomUserDetails) authenticate.getPrincipal();
+    }
+
+    private void checkDuplicateLoginId(String loginId) {
+        memberRepository.findByLoginId(loginId)
+                .ifPresent(m -> {
+                    throw new DuplicateLoginIdException("이미 존재하는 아이디입니다.");
+                });
     }
 
 }
