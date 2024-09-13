@@ -24,6 +24,9 @@ public class ToDo {
     @ManyToOne(fetch = FetchType.LAZY)
     private Member member;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Team team;
+
     private ToDo(String content, boolean done, Member member) {
         this.content = content;
         this.done = done;
