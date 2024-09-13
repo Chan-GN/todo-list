@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+/**
+ * JWT 토큰 생성 및 검증을 담당하는 클래스
+ */
 @Component
 public class JwtProvider {
 

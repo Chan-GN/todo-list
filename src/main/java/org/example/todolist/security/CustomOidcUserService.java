@@ -8,6 +8,9 @@ import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Service;
 
+/**
+ * OAuth2 사용자 정보를 처리하는 커스텀 서비스 클래스
+ */
 @Service
 public class CustomOidcUserService extends OidcUserService {
 
@@ -24,6 +27,7 @@ public class CustomOidcUserService extends OidcUserService {
         String email = oidcUser.getEmail();
         String name = oidcUser.getFullName();
 
+        // 회원 정보가 없는 경우 자동으로 회원가입
         Member member = memberRepository.findByLoginId(email)
                 .orElseGet(() -> createMember(email, name));
 

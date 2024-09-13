@@ -5,6 +5,9 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * To-Do 항목을 표현하는 엔티티 클래스
+ */
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity

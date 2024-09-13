@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * To-Do 항목 관련 엔드포인트를 처리하는 컨트롤러
+ */
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/to-do")

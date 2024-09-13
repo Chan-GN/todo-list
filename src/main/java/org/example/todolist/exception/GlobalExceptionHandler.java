@@ -6,6 +6,9 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+/**
+ * 전역 예외 처리를 담당하는 클래스
+ */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

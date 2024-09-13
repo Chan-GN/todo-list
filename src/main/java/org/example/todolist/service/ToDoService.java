@@ -16,6 +16,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * To-Do 항목 관련 비즈니스 로직을 처리하는 서비스 클래스
+ */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

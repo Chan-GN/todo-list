@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 인증 관련 엔드포인트를 처리하는 컨트롤러
+ */
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/auth")

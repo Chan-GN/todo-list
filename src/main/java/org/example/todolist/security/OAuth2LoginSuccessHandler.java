@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+/**
+ * OAuth2 로그인 성공 시 처리를 담당하는 핸들러 클래스
+ */
 @Component
 public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 

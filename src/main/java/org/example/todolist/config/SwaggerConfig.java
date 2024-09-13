@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Collections;
 
+/**
+ * Swagger API 문서화 설정을 담당하는 클래스
+ */
 @Configuration
 public class SwaggerConfig {
 

@@ -24,6 +24,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.List;
 
+/**
+ * Spring Security 설정을 담당하는 클래스
+ */
 @Configuration
 @RequiredArgsConstructor
 @EnableWebSecurity

@@ -2,6 +2,9 @@ package org.example.todolist.dto.auth;
 
 import lombok.Data;
 
+/**
+ * 로그인 응답 정보를 담는 DTO 클래스
+ */
 @Data
 public class SignInResponseDto {
 

@@ -25,6 +25,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * JWT 토큰을 검증하고 인증을 처리하는 필터 클래스
+ */
 @Component
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {

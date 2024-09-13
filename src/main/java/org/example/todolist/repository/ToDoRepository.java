@@ -7,6 +7,9 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * To-Do 항목에 대한 데이터베이스 작업을 처리하는 리포지토리 인터페이스
+ */
 public interface ToDoRepository extends JpaRepository<ToDo, Long> {
 
     @Query("SELECT t " +

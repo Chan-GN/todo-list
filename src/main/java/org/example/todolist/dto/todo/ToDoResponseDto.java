@@ -2,6 +2,9 @@ package org.example.todolist.dto.todo;
 
 import lombok.Data;
 
+/**
+ * To-Do 항목 응답 정보를 담는 DTO 클래스
+ */
 @Data
 public class ToDoResponseDto {
 

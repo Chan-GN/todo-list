@@ -13,6 +13,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 
+/**
+ * 사용자 상세 정보를 담는 커스텀 클래스
+ */
 @Getter
 public class CustomUserDetails implements OidcUser, UserDetails {
 

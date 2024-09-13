@@ -5,6 +5,9 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+/**
+ * 회원가입 요청 정보를 담는 DTO 클래스
+ */
 @Data
 public class SignUpRequestDto {
 

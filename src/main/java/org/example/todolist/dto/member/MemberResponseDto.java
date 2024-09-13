@@ -2,6 +2,9 @@ package org.example.todolist.dto.member;
 
 import lombok.Data;
 
+/**
+ * 회원 정보 응답을 담는 DTO 클래스
+ */
 @Data
 public class MemberResponseDto {
 

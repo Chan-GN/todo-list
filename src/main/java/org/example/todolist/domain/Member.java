@@ -8,6 +8,9 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * 회원 정보를 표현하는 엔티티 클래스
+ */
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
